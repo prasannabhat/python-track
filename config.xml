@@ -1,0 +1,15 @@
+<options>
+<!-- 
+<file>RequestTracking.xlsx</file>
+-->
+<file>\\bosch.com\dfsrb\DfsIN\LOC\Kor\NE1\NE1_Info\41_EAR\10_Projects\CUBAS_COM\10_Development\Autosar\02_Planning\CSCRM_Monthly_Planning.xlsx</file>
+	<user>pbt2kor</user>
+	<password>as</password>
+	<query>PlanningComStack</query>
+
+	<date-columns>
+		<date-column>CodeFreezeDate</date-column>
+		<date-column>ReleaseDate</date-column>	
+	</date-columns>
+	<sync-key>RequestId:TaskId</sync-key>
+</options>

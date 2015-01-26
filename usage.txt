@@ -1,0 +1,18 @@
+python track.py <command> [options] <mandatory-parameters>
+
+Commands :
+	sync 					Get the data from CSCRM and sync with the excel sheet
+
+Mandatory Parameters
+	-f, --file				Excel file to write the data
+	-u, --user				User name , required to login to CSCRM
+	-p, --password			Password for CSCRM
+	-q, --query 			Query which should be run to fetch the data from
+	-sk, --sync-key			Primary key for syncing. If there are multiple keys seperate them using :
+
+Optional parameters
+	-s,  --sheet			Worksheet where the data will be written. If not specified query name will be used for this
+	-x,  --xml 				XML file which contains the options. Even the Mandatory parameters can be specified in XML file
+							If same parameter is present both in command line & XML , command line parameter will be given priority
+
+
