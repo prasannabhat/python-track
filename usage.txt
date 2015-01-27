@@ -1,7 +1,8 @@
 python track.py <command> [options] <mandatory-parameters>
 
 Commands :
-	sync 					Get the data from CSCRM and sync with the excel sheet
+	sync 					Get the data from CSCRM and sync with the excel sheet.
+							This has to be supplied from command line only, not from xml file
 
 Mandatory Parameters
 	-f, --file				Excel file to write the data
