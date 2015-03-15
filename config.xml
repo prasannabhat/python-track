@@ -4,6 +4,6 @@
 	<password>abc</password>
 	<query>queryname</query>
 	<date-column>CodeFreezeDate:ReleaseDate</date-column>
-	<sync-key>RequestId:TaskId</sync-key>
+	<sync_key>RequestId:TaskId</sync_key>
 	<sheet>all</sheet>
 </options>

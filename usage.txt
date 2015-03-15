@@ -9,7 +9,7 @@ Mandatory Parameters
 	-u, --user				User name , required to login to CSCRM
 	-p, --password			Password for CSCRM
 	-q, --query 			Query which should be run to fetch the data from
-	-sk, --sync-key			Primary key for syncing. If there are multiple keys seperate them using :
+	-sk, --sync_key			Primary key for syncing. If there are multiple keys seperate them using :
 
 Optional parameters
 	-s,  --sheet			Worksheet where the data will be written. If not specified query name will be used for this
