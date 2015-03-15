@@ -17,3 +17,6 @@ Optional parameters
 							If same parameter is present both in command line & XML , command line parameter will be given priority
 
 
+Sample command
+
+python track.py sync -f track.xlsx -u prasanna -p abs -q all -sk request -s all

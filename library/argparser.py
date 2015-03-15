@@ -1,26 +1,23 @@
 import argparse
 import sys
 
-def parse_args(args = None):
+class MyArgumentParser(argparse.ArgumentParser):
+	"""docstring for MyArgumentParser"""
+	def __init__(self, parents=[]):
+		super(MyArgumentParser, self).__init__(parents=parents,add_help=False)
+
+
+def parse_args(parser, xml_file = None , args = None):
 	""" 
-	This function takes the command line arguments from the terminal and returns the dictionary corresponds to the arguments
-	Refer usage.txt for the argument details
-	If any mandatory argument is missing or unsupported value is supplied to any parameter then this method should throw Exception, 
-	displaying an appripriate message
-
+	This function takes the below arguments
+	parser : Base ArgumentParser object, where the rules for the parser are defined.
+	xml_file : Argument name that corresponds to the XML file which also supplies arguments.
+				If this argument is present , this function will parse the given XML file and combine the arguments with the passed args as well.
+	args : The ARGS array				
 	"""
-	parser = argparse.ArgumentParser()
-	#Positional arguments
-	parser.add_argument("command", help= "Command to be executed", choices= ['sync'])
-
-	# Optional arguments , which are optional
-	parser.add_argument("-x", "--xml", help=""" XML file which contains the options. Even the Mandatory parameters can be specified in XML file
-							If same parameter is present both in command line & XML , command line parameter will be given priority""")
-	parser.add_argument("-s", "--sheet" , help = "Worksheet where the data will be written. If not specified query name will be used for this")
-
-	parser.add_argument("-u", "--user", help="User name , required to login to CSCRM",required=True)	
+	p = MyArgumentParser(parents= [parser])
 	args = args if args else sys.argv[1:]
-	args = parser.parse_args(args)
+	args = p.parse_args(args)
 	argsDictionary = args.__dict__
-	return argsDictionary
+	return args
 
