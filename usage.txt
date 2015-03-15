@@ -19,4 +19,4 @@ Optional parameters
 
 Sample command
 
-python track.py sync -f track.xlsx -u prasanna -p abs -q all -sk request -s all
+python track.py sync -f track.xlsx -u prasanna -p abs -q all -sk request -x config.xml

@@ -1,15 +1,9 @@
 <options>
-<!-- 
-<file>RequestTracking.xlsx</file>
--->
-<file>CSCRM_Monthly_Planning.xlsx</file>
+	<file>CSCRM_Monthly_Planning.xlsx</file>
 	<user>name</user>
 	<password>abc</password>
 	<query>queryname</query>
-<!-- attribute type="list" indicates that the elements should be handled as list/array -->
-	<date-columns type="list">
-		<date-column>CodeFreezeDate</date-column>
-		<date-column>ReleaseDate</date-column>	
-	</date-columns>
+	<date-column>CodeFreezeDate:ReleaseDate</date-column>
 	<sync-key>RequestId:TaskId</sync-key>
+	<sheet>all</sheet>
 </options>
